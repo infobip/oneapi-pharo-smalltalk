@@ -6,7 +6,7 @@ This library is written and tested on [Pharo](http://www.pharo-project.org/home)
 These are file-outs of packages which can be filed-in into the image using File Browser component. Before loading the source code make sure to load the dependencies!
 
 - [Zinc](https://github.com/svenvc/zinc) HTTP client - the library depends on Zinc HTTP client components (examples use also HTTP server) which should already be present in this Pharo release. You might want to update to the newest version as it is constantly improving.
-- [NeoJSON] (https://github.com/svenvc/docs/blob/master/neo/neo-json-paper.md) - JSON is handled using this small library which **is not** present in this release. You can use configuration browser to load it.
+- [NeoJSON] (https://github.com/svenvc/docs/blob/master/neo/neo-json-paper.md) - JSON is handled using this small library which **is not** present in this Pharo release. You can use configuration browser to load it.
 
 ## Usage examples
 
@@ -21,7 +21,7 @@ Before you begin sending messages you have to create a client instance with a pr
 
 ### Login
 
-Login to obtain authentication token form the server:
+Login to obtain authentication token form the server. This step is only needed if you choose to authenticate with a token. By default Basic HTTP authentication is used to this step is not needed.
 
     smsClient login.
 
@@ -75,7 +75,7 @@ Having the delivery report pushed to your HTTP server is much better (resource-w
 ### It's always nice to clean up behind you:
 
     smsClient logout.
-    smsClient close. "Closes the underlying TCP socket, which is keep open for HTTP1.1 keep-alive feature."
+    smsClient close. "Closes the underlying TCP socket, which is kept open for HTTP1.1 keep-alive feature."
 
 
 License
