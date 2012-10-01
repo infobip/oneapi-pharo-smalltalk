@@ -21,7 +21,7 @@ Before you begin sending messages you have to create a client instance with a pr
 
 ### Login
 
-Login to obtain authentication token form the server. This step is only needed if you choose to authenticate with a token. By default Basic HTTP authentication is used to this step is not needed.
+Login to obtain authentication token form the server. This step is only needed if you choose to authenticate with a token. By default Basic HTTP authentication is used so this step is not needed.
 
     smsClient login.
 
